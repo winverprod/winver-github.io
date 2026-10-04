@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>winver/admin</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <section class="admin-screen" id="adminScreen" aria-label="admin mode">
+      <div class="admin-bar">
+        <span>winver/admin</span>
+        <a class="utility-button" href="../index.html">site</a>
+      </div>
+
+      <div class="admin-login" id="adminLogin">
+        <form class="admin-box" id="loginForm">
+          <h1>login</h1>
+          <label>
+            user
+            <input autocomplete="username" id="loginUser" name="user" required />
+          </label>
+          <label>
+            password
+            <input
+              autocomplete="current-password"
+              id="loginPass"
+              name="password"
+              required
+              type="password"
+            />
+          </label>
+          <button class="solid-button" type="submit">enter</button>
+          <p class="form-status" id="loginStatus" role="status"></p>
+        </form>
+      </div>
+
+      <div class="admin-dashboard" id="adminDashboard" hidden>
+        <form class="admin-form" id="releaseForm">
+          <div class="section-head compact">
+            <p class="eyebrow">new release</p>
+            <h1>add release</h1>
+          </div>
+
+          <label class="checkbox-label">
+            <input id="releaseIsPreRelease" type="checkbox" />
+            is pre-release (пре-релиз / pre-save)
+          </label>
+
+          <label>
+            title
+            <input id="releaseTitle" required />
+          </label>
+
+          <label>
+            artist(s)
+            <input id="releaseArtists" required value="winver" />
+          </label>
+
+          <label>
+            genre
+            <input id="releaseGenre" required />
+          </label>
+
+          <label>
+            date
+            <input id="releaseDate" required type="date" />
+          </label>
+
+          <label>
+            cover image from computer
+            <input accept="image/*" id="releaseImageFile" type="file" />
+          </label>
+
+          <label>
+            or image url
+            <input id="releaseImageUrl" placeholder="https://..." />
+          </label>
+
+          <label>
+            listen link 
+            <input id="releaseLink" type="url" placeholder="https://..." />
+          </label>
+
+          <button class="solid-button" type="submit">save release</button>
+          <p class="form-status" id="releaseStatus" role="status"></p>
+        </form>
+
+        <div class="admin-list-wrap">
+          <div class="admin-tools">
+            <button class="line-button" id="exportData" type="button">export json</button>
+            <label class="file-button">
+              import json
+              <input accept="application/json" id="importData" type="file" />
+            </label>
+            <button class="line-button danger" id="resetData" type="button">
+              reset demo
+            </button>
+          </div>
+          <div class="admin-release-list" id="adminReleaseList"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
