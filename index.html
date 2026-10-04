@@ -1,12 +1,81 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <title>In construction...</title>
-</head>
-<body>
-    <center>
-        <p>In construction. Stay tuned!</p>
-    </center>
-</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="winver - personal page and releases archive"
+    />
+    <title>winver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell" id="shell">
+      <header class="topbar" aria-label="main navigation">
+        <button class="brand-chip" id="brandHome" type="button">winver</button>
+        <nav class="nav-tabs" aria-label="site sections">
+          <button class="nav-tab active" type="button" data-view="home">home</button>
+          <button class="nav-tab" type="button" data-view="bio">bio</button>
+          <button class="nav-tab" type="button" data-view="contact">contact</button>
+        </nav>
+        <div class="top-actions">
+          <button class="utility-button" id="langToggle" type="button">EN</button>
+        </div>
+      </header>
+
+      <section class="logo-stage" aria-label="winver logo intro">
+        <button class="logo-button" id="logoButton" type="button">
+          <pre class="ascii-logo" id="asciiLogo" aria-hidden="true"></pre>
+          <span class="logo-caption">winver</span>
+        </button>
+      </section>
+
+      <main class="site-main" id="siteMain" aria-live="polite">
+        <section class="view-panel active" id="viewHome" data-panel="home">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="homeEyebrow">personal archive</p>
+            <h1 data-i18n="homeTitle">winver releases</h1>
+          </div>
+          <div class="release-feature" id="featuredRelease"></div>
+          <div class="release-list-head">
+            <span data-i18n="archiveTitle">archive</span>
+            <span id="releaseCount">0</span>
+          </div>
+          <div class="release-grid" id="releaseGrid"></div>
+          <button class="line-button" id="showMore" type="button" hidden>
+            show more
+          </button>
+        </section>
+
+        <section class="view-panel" id="viewBio" data-panel="bio">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="bioEyebrow">bio</p>
+            <h1 data-i18n="bioTitle">about winver</h1>
+          </div>
+          <p class="text-block" data-i18n="bioBody">
+            19 y.o. artist, remixer, producer, beatmaker. he was born in ukraine. making some unusual things with sound.
+          </p>
+        </section>
+
+        <section class="view-panel" id="viewContact" data-panel="contact">
+          <div class="section-head">
+            <p class="eyebrow" data-i18n="contactEyebrow">contact</p>
+            <h1 data-i18n="contactTitle">links</h1>
+          </div>
+          <div class="contact-list">
+            <a href="mailto:prodbywinver@proton.me" target="_blank" rel="noreferrer">email</a>
+            <a href="https://instagram.com/dploxq" target="_blank" rel="noreferrer">instagram</a>
+            <a href="https://soundcloud.com/wnvrr0" target="_blank" rel="noreferrer">soundcloud</a>
+            <a href="https://t.me/winverprod" target="_blank" rel="noreferrer">telegram</a>
+          </div>
+        </section>
+      </main>
+      <footer class="bottombar" aria-label="site footer">
+        <span class="footer-copy">© <span id="copyrightYear">2026</span> winver | LUNACY Group | VOIDROOM PRODUCTION LLC</span>
+        <span class="footer-rights" data-i18n="footerRights">все права защищены</span>
+      </footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
